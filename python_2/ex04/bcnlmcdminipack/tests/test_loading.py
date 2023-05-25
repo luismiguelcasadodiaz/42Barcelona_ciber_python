@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 from time import sleep
-from bcn-lmcd-minipack import ft_progress
+import bcnlmcdminipack
 
 def test_x(X):
     ret = 0
-    for elem in ft_progress(X):
+    for elem in bcnlmcdminipack.ft_progress(X):
         ret = ret + (elem + 3) % 5
         sleep(0.01)
     print()

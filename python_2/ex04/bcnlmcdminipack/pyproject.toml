@@ -30,7 +30,7 @@ classifiers = [
 #dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 [project.urls]
-Homepage = "https://github.com/luismiguelcasadodiaz/42Barcelona_ciber_python/tree/05051a429aed3d5ed96de6642d7c55e162c9967a/python_2/ex04/42bcn_lmcd_minipack"
+Homepage = "https://github.com/luismiguelcasadodiaz/42Barcelona_ciber_python/tree/main/python_2/ex04/bcnlmcdminipack"
 
 #[project.scripts]
 #realpython = "reader.__main__:main"

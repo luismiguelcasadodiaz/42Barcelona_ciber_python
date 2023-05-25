@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-from  bcn_lmcd_minipack import LMCD_logger
+import bcnlmcdminipack
+import time
 
 class CoffeeMachine():
 
@@ -35,7 +36,7 @@ class CoffeeMachine():
 
 
 if __name__ == "__main__":
-    logger = LMCD_logger("Coffee Machine", "machine.log")
+    logger = bcnlmcdminipack.LMCD_logger("Coffee Machine", "machine.log")
     logger.init_log()
 
     machine = CoffeeMachine()
