@@ -1,0 +1,6 @@
+conda list
+conda search -i "numpy=1.21.5"
+conda remove numpy
+conda install numpy
+conda list --export > requirements.txt
+
