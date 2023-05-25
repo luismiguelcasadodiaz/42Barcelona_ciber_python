@@ -1,0 +1,36 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=66.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bcnlmcdminipack"
+version = "0.0.1"
+description = "looger and progress bar"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [{ name = "Luis Miguel Casado Díaz", email = "luismiguelcasadodiaz@gmail.com" }]
+keywords = ["logger", "progress bar", "tool"]
+classifiers = [
+    "License :: OSI Approved :: GNU GPLv3",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console"
+]
+
+#dependencies = []   No dependencies on third party libraries
+
+
+
+#[project.optional-dependencies]
+#dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/luismiguelcasadodiaz/42Barcelona_ciber_python/tree/05051a429aed3d5ed96de6642d7c55e162c9967a/python_2/ex04/42bcn_lmcd_minipack"
+
+#[project.scripts]
+#realpython = "reader.__main__:main"

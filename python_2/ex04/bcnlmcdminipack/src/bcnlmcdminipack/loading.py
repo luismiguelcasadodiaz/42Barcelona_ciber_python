@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-import time
-import os
-
-
 
 
 def ft_progress(list):

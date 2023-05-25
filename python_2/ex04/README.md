@@ -47,3 +47,9 @@ disutils. Each build system has its own instructions for the configuration of py
 requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 ```
+
+
+With pip-compile from pip-tools
+> pip-compile --resolver=backtracking pyproject.toml 
+
+i made a verification of toml file and generate a requirements.txt file

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from time import sleep
-from loading import ft_progress
+from bcn-lmcd-minipack import ft_progress
 
 def test_x(X):
     ret = 0
