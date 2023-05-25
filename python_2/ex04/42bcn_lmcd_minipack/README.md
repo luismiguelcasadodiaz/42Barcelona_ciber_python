@@ -1,4 +1,4 @@
-# The package my_minipack
+# The package 42bcn_lmcd_minipack
       ** contents
 ## Logger and progress bar modules
 
@@ -13,6 +13,6 @@ it is a **decorator** for writting in a file the time a funciton took to execute
 
 # The progress bar
 
-It is a **generator** that measures tiem between call and estimates time
+It is a **generator** that measures time between call and estimates time
 to finish
 
