@@ -10,11 +10,11 @@ at import sentence are equal.
 
 This two facts moved me to define my module as:
 
-> 42bcn_lmcd_minipack
+> bcnlmcdminipack
 
 To avoid collision wot other classmates exercises.
 
-42bcn_lmcd_minipack includes two modules:
+bcnlmcdminipack includes two modules:
 
 
 . aprogress bar
@@ -24,10 +24,10 @@ The folder to build the package has this structure:
 
 
 ```
-42bcn_lmcd_minipack
+bcnlmcdminipack
 |
 |-- src/
-|   |-- 2bcn_lmcd_minipack
+|   |-- bcnlmcdminipack
 |       |-- __init__.py
 |       |-- logger.py
 |       |-- progress.py
@@ -49,7 +49,18 @@ build-backend = "setuptools.build_meta"
 ```
 
 
+
 With pip-compile from pip-tools
+> python3 -m pip install pip-tools
 > pip-compile --resolver=backtracking pyproject.toml 
 
-i made a verification of toml file and generate a requirements.txt file
+I made a verification of toml file and generate a requirements.txt file.
+I can install requirements with pip-sync
+
+# Install locally
+## Editable installs allow code edition after installation
+
+In the folder wiht pyproject.toml file execute:
+
+> python3 -m pip install -e .
+ 
