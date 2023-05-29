@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 """
 Python’s filter() is a built-in function that allows you to process an
 iterable and extract those items that satisfy a given condition.

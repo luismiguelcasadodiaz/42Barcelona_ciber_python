@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 
 
 def has_only_two_parameter(fun) -> bool:
