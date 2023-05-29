@@ -9,6 +9,8 @@ Pay attention to all different actions logged at the call of each methods.
 Write the username from environment variable is written to the log file
 
 """
+import time
+import os
 
 
 class LMCD_logger():
@@ -37,33 +39,32 @@ class LMCD_logger():
         with open(self.__log_file_path, 'a') as f:
             f.write(msg)
 
+    def log(self, func):
+        def wrapper(*args, **kwargs):
+            # get init time
+            ini_t = time.time()
+            # execute decorated function
+            result = func(*args, **kwargs)
+            # calculate execution time
+            end_t = time.time()
+            the_time = (end_t - ini_t) * 1000   # conversion to ms
+            unidad = 'ms'
 
-def log(func):
-    def wrapper(*args, **kwargs):
-        # get init time
-        ini_t = time.time()
-        # execute decorated function
-        result = func(*args, **kwargs)
-        # calculate execution time
-        end_t = time.time()
-        the_time = (end_t - ini_t) * 1000   # conversion to ms
-        unidad = 'ms'
+            # if more tham 1000 ms change to seconds
+            if the_time > 1000:
+                the_time = the_time / 1000
+                unidad = " s"
 
-        # if more tham 1000 ms change to seconds
-        if the_time > 1000:
-            the_time = the_time / 1000
-            unidad = " s"
+            # Elaborate text to log
+            right_spaces = 20 - len(func.__name__)
+            func_name = func.__name__ + ' ' * right_spaces
+            chunk1 = f"Running: {func_name}"
+            chunk2 = f"[ exec-time = {the_time:4.3f} {unidad}]\n"
 
-        # Elaborate text to log
-        right_spaces = 20 - len(func.__name__)
-        func_name = func.__name__ + ' ' * right_spaces
-        chunk1 = f"Running: {func_name}"
-        chunk2 = f"[ exec-time = {the_time:4.3f} {unidad}]\n"
+            # log the text
+            self.write_log(chunk1 + chunk2)
 
-        # log the text
-        logger.write_log(chunk1 + chunk2)
+            # retunr decoracted function's result
+            return result
 
-        # retunr decoracted function's result
-        return result
-
-    return wrapper
+        return wrapper

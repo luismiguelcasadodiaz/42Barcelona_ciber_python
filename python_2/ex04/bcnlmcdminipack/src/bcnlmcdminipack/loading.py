@@ -1,4 +1,7 @@
 #!/usr/local/bin/python3
+import time
+import os
+from random import randint
 
 
 def ft_progress(list):
@@ -13,14 +16,14 @@ def ft_progress(list):
 
     size_len = len(str(size))
     percen = 0
-    
+
     while count < size - 1:
         count = count + 1
         actual_time = time.time()
-        sleep_time = actual_time - my_time  #  time diff between calls
-        my_time = actual_time               #  last call time update
+        sleep_time = actual_time - my_time   # time diff between calls
+        my_time = actual_time                # last call time update
         # i use time between calls to calculate execution time
-        tot_eta_time = sleep_time * size 
+        tot_eta_time = sleep_time * size
         # elapsee time accumulation
         elap_time = elap_time + sleep_time
         chunk5 = f"| elapsed time {elap_time:.2f}s"
@@ -31,7 +34,7 @@ def ft_progress(list):
         chunk2 = f"[{100 * percen:3.0f}%]"
         display_counter = count + 1
         chunk4 = f"{display_counter:{size_len}}/{size}"
-        bar_items = "=" *(int(bar_size * percen) - 1) + ">"
+        bar_items = "=" * (int(bar_size * percen) - 1) + ">"
         chunk3 = f"[{bar_items:<{bar_size}}] "
         print(chunk1 + chunk2 + chunk3 + chunk4 + chunk5, end="\r", flush=True)
         yield list[count]

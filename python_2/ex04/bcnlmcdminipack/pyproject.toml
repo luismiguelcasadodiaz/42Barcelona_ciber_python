@@ -14,11 +14,11 @@ license = { file = "LICENSE" }
 authors = [{ name = "Luis Miguel Casado Díaz", email = "luismiguelcasadodiaz@gmail.com" }]
 keywords = ["logger", "progress bar", "tool"]
 classifiers = [
-    "License :: OSI Approved :: GNU GPLv3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.7",
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "Development Status :: 4 - Beta",
+    "Development Status :: 3 - Alpha",
     "Environment :: Console"
 ]
 
