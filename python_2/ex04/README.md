@@ -12,7 +12,7 @@ This two facts moved me to define my module as:
 
 > bcnlmcdminipack
 
-To avoid collision wot other classmates exercises.
+To avoid collision with other classmates exercises.
 
 bcnlmcdminipack includes two modules:
 
